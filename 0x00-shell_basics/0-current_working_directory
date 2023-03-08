@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Current working directory: $(pwd)"
+echo "Current working directory: $(/tmp/correction/1578754682036096055051292568652166278094_5/205/366805/0x00-shell_basics)"
