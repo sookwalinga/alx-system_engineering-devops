@@ -1,2 +1,2 @@
 #!/bin/bash
-for file in *.html do if [ ! -e "../$file" ] then cp "$file" "../$file" else if [ "$file" -nt  "../$file" ] then p "$file" "../$file" fi fi done
+find . -maxdepth 1 -name "*.html" -newer "../" -exec cp -n {} ../ \
