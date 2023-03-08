@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1a | awk '{printf("%s%s",($0=="."||$0=="..")?$0"/":$0,(NR%2==0)?ORS:",");}' | sort -df | sed 's/,$/\n/'
+ls -1a ; awk '{printf("%s%s",($0=="."||$0=="..")?$0"/":$0,(NR%2==0)?ORS:",");}' < $(ls -1a) | sort -df ; sed 's/,$/\n/'
