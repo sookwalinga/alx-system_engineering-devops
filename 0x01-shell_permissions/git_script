@@ -1,0 +1,8 @@
+#!/bin/bash
+
+read -p "Enter file name: " file_name
+
+chmod u+x "$file_name"
+git add "$file_name"
+git commit -am "$file_name"
+git push
