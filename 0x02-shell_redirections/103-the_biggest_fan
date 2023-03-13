@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# read in the log file specified as the first argument
+log_file=$1
+
+# count the number of requests for each host or IP address and store in an associative array
+declare -A request_counts
+while read line; do
+  host=$(echo "$line" | cut -f1)
+  ((request_counts["$host"]++))
+done < "$log_file"
+
+# sort the hosts or IP addresses by number of requests in descending order and print out the top 11
+echo "Host or IP address, Number of requests"
+for host in "${!request_counts[@]}"; do
+  printf "%s, %d\n" "$host" "${request_counts["$host"]}"
+done | sort -t, -rnk2 | head -n11
