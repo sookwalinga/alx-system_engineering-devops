@@ -1,0 +1,9 @@
+#!/bin/bash
+readarray -t words
+sorted_words=$(printf '%s\n' "${words[@]}" | sort)
+word_counts=$(echo "$sorted_words" | uniq -c)
+echo "$word_counts" | while read count word; do
+  if [ "$count" -eq 1 ]; then
+    echo "$word"
+  fi
+done | sort
