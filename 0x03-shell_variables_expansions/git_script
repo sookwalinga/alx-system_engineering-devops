@@ -5,9 +5,9 @@ read -p "Enter file name: " file_name
 chmod u+x "$file_name"
 
 # Ignore files with the tilde symbol
-echo "*~" >> .gitignore
+#echo "*~" >> .gitignore
 
 git add "$file_name"
-git add .gitignore
+#git add .gitignore
 git commit -am "$file_name"
 git push
