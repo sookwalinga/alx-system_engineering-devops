@@ -1,0 +1,2 @@
+#!/bin/bash
+read -p "Enter a number in base 2: " number; echo "ibase=2; $number" | bc
