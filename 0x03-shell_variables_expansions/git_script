@@ -1,11 +1,11 @@
 #!/bin/bash
 
-read -p "Enter file name: " fi
+read -p "Enter commit message: " commit_msg
 
 # Ignore files with the tilde symbol
 #echo "*~" >> .gitignore
 
-git add "$file_name"
+git add "$commit_msg"
 #git add .gitignore
-git commit -am "$file_name"
+git commit -am "$commit_msg"
 git push
