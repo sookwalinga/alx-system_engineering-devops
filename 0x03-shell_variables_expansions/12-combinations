@@ -1,2 +1,2 @@
 #!/bin/bash
-for i in {a..z}{a..z}; do [[ $i != oo ]] && echo $i; done | sort
+echo {a..n}{a..z} {o..z}{a..z} | tr " " "\n" | grep -v "oo"
