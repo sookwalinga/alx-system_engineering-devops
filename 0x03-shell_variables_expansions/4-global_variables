@@ -1,2 +1,2 @@
 #!/bin/bash
-printenv | sed 's/=/: /' | column -t -s ':'
+printenv
