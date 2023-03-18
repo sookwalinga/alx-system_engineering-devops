@@ -1,2 +1,2 @@
 #!/bin/bash
-while read -r line; do echo "$line"; read -r line || break; done
+grep -n '' input_file | grep -Eo '^[0-9]+[02468]:.*$' | cut -d ':' -f2
