@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Acidic" | tr 'Ac' 'Ze'
+echo tr 'Acf' 'Ze'
