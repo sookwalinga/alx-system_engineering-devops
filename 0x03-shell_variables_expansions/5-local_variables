@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Local variables:\n$(set | grep -vE '^(BASH_|FUNCNAME|GROUPS|HOME|HOSTNAME|HOSTTYPE|IFS|LANG|LOGNAME|MACHTYPE|OLDPWD|OPTERR|OSTYPE|PATH|PIPESTATUS|POSIXLY_CORRECT|PPID|PS1|PS2|PWD|SHELL|SHELLOPTS|SHLVL|TERM|UID|USER|_=')\nEnvironment variables:\n$(printenv)\nFunctions:\n$(declare -F)"
+set
